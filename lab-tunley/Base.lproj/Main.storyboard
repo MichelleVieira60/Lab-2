@@ -20,7 +20,7 @@
                                 <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="136" id="lmn-u0-01T">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TrackCell" rowHeight="136" id="lmn-u0-01T" customClass="TrackCell" customModule="lab_tunley" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="393" height="136"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lmn-u0-01T" id="wwg-VZ-fzh">
@@ -38,14 +38,14 @@
                                                             </constraints>
                                                         </imageView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Oud-nd-gey">
-                                                            <rect key="frame" x="116" y="0.0" width="205" height="55"/>
+                                                            <rect key="frame" x="116" y="0.0" width="205" height="58.333333333333336"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tiq-Fw-QXy">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="205" height="20"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="205" height="23.333333333333332"/>
                                                                     <attributedString key="attributedText">
                                                                         <fragment content="TrackName">
                                                                             <attributes>
-                                                                                <font key="NSFont" size="17" name="Arial-Black"/>
+                                                                                <font key="NSFont" size="20" name="Arial-Black"/>
                                                                                 <font key="NSOriginalFont" size="17" name="Arial-Black"/>
                                                                             </attributes>
                                                                         </fragment>
@@ -53,7 +53,7 @@
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4qh-tI-ZNj">
-                                                                    <rect key="frame" x="0.0" y="36" width="205" height="19"/>
+                                                                    <rect key="frame" x="0.0" y="39.333333333333329" width="205" height="19"/>
                                                                     <attributedString key="attributedText">
                                                                         <fragment content="ArtistName">
                                                                             <attributes>
@@ -76,6 +76,11 @@
                                                 <constraint firstAttribute="bottomMargin" secondItem="GzR-We-hL5" secondAttribute="bottom" constant="16" id="xYq-9V-3Jh"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="artistNameLabel" destination="4qh-tI-ZNj" id="gv1-A0-uZr"/>
+                                            <outlet property="trackImageView" destination="eeC-k8-Qu1" id="xXO-3H-V3C"/>
+                                            <outlet property="trackNameLabel" destination="Tiq-Fw-QXy" id="7bn-5r-Xhl"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
